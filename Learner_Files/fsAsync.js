@@ -15,7 +15,7 @@ readFile("./01-node-tutorial/content/first.txt", "utf-8", (err, result) => {
     }
     const second = result;
     writeFile(
-      "./result-async.txt",
+      "../result-async.txt",
       `Here is a combination of ${first} and ${second}`,
       (err, result) => {
         if (err) {
