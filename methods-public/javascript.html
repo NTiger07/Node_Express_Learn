@@ -36,7 +36,8 @@
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
     integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous">
+    </script>
   <script>
     const result = document.querySelector('.result')
 
@@ -44,7 +45,7 @@
       try {
         const { data } = await axios.get('/api/people')
 
-        const people = data.data.map((person) => {
+        const people = data.map((person) => {
           return `<h5>${person.name}</h5>`
         })
         result.innerHTML = people.join('')
