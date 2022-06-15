@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-let { people } = require("./data");
+let { people } = require("../data");
 
 app.put("/api/people/:id", (req, res) => {
     const { id } = req.params

@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-let { people } = require("./data");
+let { people } = require("../data");
 
 app.delete("/api/people/:id", (req, res) => {
     const singlePerson = people.find((person) => person.id === Number(req.params.id))
